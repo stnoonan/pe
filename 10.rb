@@ -23,6 +23,12 @@ primes = Generator.new do |blck|
 	end
 end
 
-#for i in 1..10001
-#	puts primes.next
-#end
+sum = 0
+while true
+	p = primes.next
+	break if p > 2000000
+	sum += p
+	puts "#{p}:#{sum}"
+end
+
+p sum
